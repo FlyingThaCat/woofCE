@@ -1,0 +1,10 @@
+download() {
+    [ -f wine-8.18.tar.xz ] || wget -t 3 -T 60 https://dl.winehq.org/wine/source/8.x/wine-8.18.tar.xz
+}
+
+build() {
+    tar -xf wine-8.18.tar.xz
+    cd wine-8.18.tar
+    ./configure --prefix=/usr
+    make install
+}
