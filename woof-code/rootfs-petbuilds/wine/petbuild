@@ -5,6 +5,6 @@ download() {
 build() {
     tar -xf wine-8.18.tar.xz
     cd wine-8.18
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr --enable-win64
     make install
 }
